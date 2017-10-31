@@ -13,7 +13,7 @@ https://docs.microsoft.com/en-us/outlook/rest/node-tutorial
   ```
   var credentials = {
     client: {
-      id: 'another app id',
+      id: 'app id',
       secret: 'YOUR APP PASSWORD HERE'
     },
     auth: {
@@ -38,5 +38,24 @@ https://docs.microsoft.com/en-us/outlook/rest/node-tutorial
     console.log('Generated auth url: ', returnVal);
     return returnVal;
   }
+
+  function getTokenFromCode(auth_code, callback, response) {
+    var token;
+    oauth2.authorizationCode.getToken({
+      code: auth_code,
+      redirect_uri: redirectUri,
+      scope: scopes.join(' ')
+    }, function (error, result) {
+      if (error) {
+        console.log('Access token error: ', error.message);
+        callback(response, error, null)
+      } else {
+        token = oauth2.accessToken.create(result);
+        console.log('Token created: ', token.token);
+      }
+    })
+  }
+
+  exports.getAuthUrl = getAuthUrl;
+  exports.getTokenFromCode = getTokenFromCode;
   ```
-  
