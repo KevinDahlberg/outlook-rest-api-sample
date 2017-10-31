@@ -1,6 +1,6 @@
 var credentials = {
   client: {
-    id: 'some other app id',
+    id: 'your app id',
     secret: 'YOUR APP PASSWORD HERE'
   },
   auth: {
