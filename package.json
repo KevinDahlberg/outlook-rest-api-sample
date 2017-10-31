@@ -1,0 +1,24 @@
+{
+  "name": "outlook-rest-api-sample",
+  "version": "1.0.0",
+  "description": "Toy app that creates a working example of the Outlook REST Api\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinDahlberg/outlook-rest-api-sample.git"
+  },
+  "keywords": [
+    "Node",
+    "Outlook",
+    "REST"
+  ],
+  "author": "Kevin Dahlberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinDahlberg/outlook-rest-api-sample/issues"
+  },
+  "homepage": "https://github.com/KevinDahlberg/outlook-rest-api-sample#readme"
+}
